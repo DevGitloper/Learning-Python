@@ -1,1 +1,1 @@
-Toni se uchi na python i e mnogo burzo zagrqvasht pri tegleneto!!!
+hello
