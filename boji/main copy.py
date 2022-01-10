@@ -1,5 +1,4 @@
 from tkinter import *
-from PIL import Image, ImageTk
 import os
 
 def delete2():
@@ -133,68 +132,16 @@ def main_screen():
   screen.configure(bg="#696969")
   screen.title("Notes 1.0")
   Label(text = "Notes 1.0", bg = "grey", width = "300", height = "2", font = ("Calibri", 13)).pack()
-
-
-  image_bg=ImageTk.PhotoImage(file='images/login.png')
-  # creating label for image
-  lable=Label(screen, bd=0, relief="sunken", bg="#696969")
-  lable.place(x=20,y=50)
-  lable.config(image=image_bg)
   
-  image_bg1=ImageTk.PhotoImage(file='images/page.png')
-  # creating label for image
-  lable1=Label(screen, bd=0, relief="sunken", bg="#696969")
-  lable1.place(x=220,y=60)
-  lable1.config(image=image_bg1)
-
+  login_btn=Button(text = "Login", height = "2", width = "30", command = login)
+  login_btn.place(x=40,y=100)
   
-  btn_inactive = Image.open("images/login_norm.png")
-  btn_active = Image.open("images/login_hover.png")
-
-  screen.btn_inactive =  ImageTk.PhotoImage(btn_inactive)
-  screen.btn_active =  ImageTk.PhotoImage(btn_active)
-
-  def on_enter(event):
-    login_btn.config(image=screen.btn_active)
-
-  def on_leave(event):
-    login_btn.config(image=screen.btn_inactive)
-
-  login_btn=Button(screen, image=screen.btn_inactive, bg="#696969", width=90, height=50, bd=0, relief="sunken", activebackground="#696969", command=login)
-  login_btn.place(x=102,y=90)
-
-  
-
-  login_btn.bind("<Enter>", on_enter)
-  login_btn.bind("<Leave>", on_leave)
-  #---------------------------------------#
-
-  btn_inactive1 = Image.open("images/register_norm.png")
-  btn_active1 = Image.open("images/register_hover.png")
-
-  screen.btn_inactive1 =  ImageTk.PhotoImage(btn_inactive1)
-  screen.btn_active1 =  ImageTk.PhotoImage(btn_active1)
-
-  def on_enter(event):
-    register_btn.config(image=screen.btn_active1)
-
-  def on_leave(event):
-    register_btn.config(image=screen.btn_inactive1)
-
-  register_btn=Button(screen, image=screen.btn_inactive1, bg="#696969", width=120, height=50, bd=0, relief="sunken", activebackground="#696969", command=register)
-  register_btn.place(x=90,y=150)
-
-  
-
-  register_btn.bind("<Enter>", on_enter)
-  register_btn.bind("<Leave>", on_leave)
-  #-----------------------------------------#
-
-
+  registerbtn=Button(text = "Register",height = "2", width = "30", command = register)
+  registerbtn.place(x=40,y=150)
 
   screen.mainloop()
 
 main_screen()
 
-# A9A9A9 BTN gray
+# #A9A9A9 BTN gray
 
